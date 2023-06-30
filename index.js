@@ -1,9 +1,21 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  const newWord = word.toLowerCase()
+  const invertedWord = newWord.split(``).reverse().join(``)
+  if(invertedWord === newWord) {
+    return `true`
+  } else {
+    return `false`
+  }
 }
 
 /* 
-  Add your pseudocode here
+  create a function isPalindrome that takes a string
+    convert the string to lowercase
+    split the string into individual letters, reverse the letters and join back together
+      check whether the strings match
+      if match return true, and if not return false
+
+
 */
 
 /*
@@ -20,6 +32,8 @@ if (require.main === module) {
 
   console.log("Expecting: false");
   console.log("=>", isPalindrome("robot"));
+  console.log(isPalindrome(`high`))
+  console.log(isPalindrome(`madam`))
 }
 
 module.exports = isPalindrome;
